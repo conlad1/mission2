@@ -1,0 +1,14 @@
+/Users/conrad/RiderProjects/mission2/obj/Debug/net10.0/mission2.GeneratedMSBuildEditorConfig.editorconfig
+/Users/conrad/RiderProjects/mission2/obj/Debug/net10.0/mission2.AssemblyInfoInputs.cache
+/Users/conrad/RiderProjects/mission2/obj/Debug/net10.0/mission2.AssemblyInfo.cs
+/Users/conrad/RiderProjects/mission2/obj/Debug/net10.0/mission2.csproj.CoreCompileInputs.cache
+/Users/conrad/RiderProjects/mission2/bin/Debug/net10.0/mission2
+/Users/conrad/RiderProjects/mission2/bin/Debug/net10.0/mission2.deps.json
+/Users/conrad/RiderProjects/mission2/bin/Debug/net10.0/mission2.runtimeconfig.json
+/Users/conrad/RiderProjects/mission2/bin/Debug/net10.0/mission2.dll
+/Users/conrad/RiderProjects/mission2/bin/Debug/net10.0/mission2.pdb
+/Users/conrad/RiderProjects/mission2/obj/Debug/net10.0/mission2.dll
+/Users/conrad/RiderProjects/mission2/obj/Debug/net10.0/refint/mission2.dll
+/Users/conrad/RiderProjects/mission2/obj/Debug/net10.0/mission2.pdb
+/Users/conrad/RiderProjects/mission2/obj/Debug/net10.0/mission2.genruntimeconfig.cache
+/Users/conrad/RiderProjects/mission2/obj/Debug/net10.0/ref/mission2.dll
