@@ -4,9 +4,9 @@ namespace mission2;
 
 public class DiceHand
 {
-    private List<Dice> Dice { get; }
+    public List<Dice> Dice { get; }
     private List<int[]> HandsRolled { get; }
-    private Dictionary<int, int> ValuesRolled { get; }
+    private int[] ValuesRolled { get; }
     public int MaxSides { get; }
     public int SecondMaxSides { get; }
 
@@ -27,7 +27,7 @@ public class DiceHand
         this.SecondMaxSides = distinctSides.Count > 1 ? distinctSides[1] : distinctSides[0];
 
 
-        this.ValuesRolled = CreateValuesDictionary();
+        this.ValuesRolled = CreateValuesArray();
 
     }
 
@@ -45,12 +45,13 @@ public class DiceHand
         this.HandsRolled.Add(rollValues);
     }
 
-    private Dictionary<int, int> CreateValuesDictionary()
+    private int[] CreateValuesArray()
     {
-        Dictionary<int, int> valuesRolledInit = new();
 
         int minSum = this.Dice.Count();
         int maxSum = this.Dice.Sum(d => d.NumberSides);
+        
+        int[] valuesRolledInit = new int[maxSum + 1];
         
         for (int sum = minSum; sum <= maxSum; sum++)
         {
@@ -60,7 +61,7 @@ public class DiceHand
         return valuesRolledInit;
     }
 
-    public void RollManyHands(int numRolls)
+    public int[] RollManyHands(int numRolls)
     {
         for (int i = 0; i < numRolls; i++)
         {
@@ -73,18 +74,7 @@ public class DiceHand
         //     System.Console.WriteLine(string.Join(", ", roll));
         // }
         
-        System.Console.WriteLine("\nDICE ROLLING SIMULATION RESULTS" +
-                                 "\nEach \"*\" represents 1% of the total number of rolls." +
-                                 $"\nTotal number of rolls = {numRolls}.\n");
-        foreach (var kvp in this.ValuesRolled)
-        { 
-            decimal percentage = (kvp.Value / (decimal)numRolls) * 100;
-            int percent = (int)Math.Round(percentage, MidpointRounding.AwayFromZero); // 3
-            string astk = new String('*', percent);
-            
-            System.Console.WriteLine($"Hand Sum {kvp.Key}: \t{astk}");
-        }
-
+        return this.ValuesRolled;
         
     }
 }

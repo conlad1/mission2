@@ -23,7 +23,20 @@ class Program
         }
 
         DiceHand hand = new DiceHand(dice);
-        hand.RollManyHands(numRolls);
+        int[] ValuesRolled = hand.RollManyHands(numRolls);
+        
+        System.Console.WriteLine("\nDICE ROLLING SIMULATION RESULTS" +
+                                 "\nEach \"*\" represents 1% of the total number of rolls." +
+                                 $"\nTotal number of rolls = {numRolls}.\n");
+        int minSum = hand.Dice.Count();
+        for (int i = minSum; i < ValuesRolled.Length; i++)
+        { 
+            decimal percentage = (ValuesRolled[i] / (decimal)numRolls) * 100;
+            int percent = (int)Math.Round(percentage, MidpointRounding.AwayFromZero); // 3
+            string astk = new String('*', percent);
+            
+            System.Console.WriteLine($"Hand Sum {i}: \t{astk}");
+        }
         
         System.Console.WriteLine("\nThank you for using the dice throwing simulator. Goodbye!");
     }

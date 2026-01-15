@@ -12,3 +12,4 @@
 /Users/conrad/RiderProjects/mission2/obj/Debug/net10.0/mission2.pdb
 /Users/conrad/RiderProjects/mission2/obj/Debug/net10.0/mission2.genruntimeconfig.cache
 /Users/conrad/RiderProjects/mission2/obj/Debug/net10.0/ref/mission2.dll
+/Users/conrad/RiderProjects/mission2/obj/Debug/net10.0/mission2.sourcelink.json
